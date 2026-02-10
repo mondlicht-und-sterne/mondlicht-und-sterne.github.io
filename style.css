@@ -1,0 +1,108 @@
+:root {
+	--green: #70b791;
+	--magenta: #db8e9d;
+	--yellow: #c9c76b;
+	--cyan: #78b3c5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: 0.2s ease-in-out;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	font-family: sans-serif;
+}
+
+.body-dark {
+	--bg: #2f3846;
+	--bg-alt: #3e4755;
+	--fg: #dee;
+	--fg-alt: #fff;
+}
+
+.body-light {
+	--bg: #ddd;
+	--bg-alt: #eee;
+	--fg: #444;
+	--fg-alt: #333;
+}
+
+.fas {
+	font-size: 1.5rem;
+}
+
+.fas:hover {
+	color: var(--yellow);
+}
+
+.btn-theme {
+	position: absolute;
+	right: 0;
+	margin: 1em;
+	cursor: pointer;
+}
+
+#box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 12em;
+	padding: 3em;
+	margin: 0 3%;
+	border-radius: 8px;
+	box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
+	background-color: var(--bg-alt);
+}
+
+.container:hover {
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+	font-size: 1.1rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+	cursor: pointer;
+	color: var(--fg-alt);
+}
+
+a {
+	line-height: 1.4;
+	text-decoration: none;
+	color: var(--fg);
+}
+
+.social-container a:hover {
+	color: var(--green);
+}
+
+.dev-container a:hover {
+	color: var(--magenta);
+}
+
+.other-container a:hover {
+	color: var(--cyan);
+}
+
+@media (max-width: 620px) {
+	.container {
+		width: 100%;
+		padding: 0.5em;
+		margin: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+}
